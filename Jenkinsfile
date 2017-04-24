@@ -1,18 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'nginx'
-    }
-    
-  }
+  agent none
   stages {
     stage('stage') {
       steps {
         sh 'echo "ls -lah"'
       }
     }
-  }
-  environment {
-    aa = 'cc'
   }
 }
